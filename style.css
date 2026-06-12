@@ -1,4 +1,3 @@
-/* Configurações Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +11,8 @@ body {
     line-height: 1.6;
 }
 
-/* Cabeçalho */
 header {
-    background-color: #1e4620; /* Verde escuro */
+    background-color: #1e4620; 
     color: white;
     padding: 20px 50px;
     display: flex;
@@ -47,10 +45,9 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #a8e6cf; /* Verde claro ao passar o mouse */
+    color: #a8e6cf;
 }
 
-/* Seção Hero (Banner) */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
     height: 80vh;
@@ -74,7 +71,7 @@ header nav ul li a:hover {
 }
 
 .btn {
-    background-color: #81b214; /* Verde folha */
+    background-color: #81b214; 
     color: white;
     padding: 12px 30px;
     text-decoration: none;
@@ -87,7 +84,7 @@ header nav ul li a:hover {
     background-color: #618810;
 }
 
-/* Seção de Conteúdo */
+
 .content-section {
     padding: 80px 20px;
     max-width: 800px;
@@ -101,7 +98,7 @@ header nav ul li a:hover {
     font-size: 32px;
 }
 
-/* Rodapé */
+
 footer {
     background-color: #222;
     color: #777;
@@ -109,16 +106,16 @@ footer {
     padding: 20px;
     font-size: 14px;
 }
-/* Estilos para o Modal (Janela Flutuante) */
+
 .modal {
-    display: none; /* Escondido por padrão */
+    display: none;
     position: fixed; 
     z-index: 2000; 
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
-    background-color: rgba(0,0,0,0.6); /* Fundo escurecido */
+    background-color: rgba(0,0,0,0.6); 
     justify-content: center;
     align-items: center;
 }
@@ -134,13 +131,12 @@ footer {
     animation: abrirModal 0.4s ease;
 }
 
-/* Animação para a janela surgir suavemente */
+
 @keyframes abrirModal {
     from { transform: scale(0.7); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Botão de Fechar (X) */
 .fechar {
     position: absolute;
     top: 15px;
@@ -155,9 +151,166 @@ footer {
     color: #333;
 }
 
-/* Ajuste para o botão do Hero aceitar a estilização antiga */
+
 button.btn {
     border: none;
     cursor: pointer;
     font-size: 16px;
+}
+
+.btn-dark-mode {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-dark-mode:hover {
+    background-color: #fff;
+    color: #1e4620;
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #0d260f; 
+}
+
+body.dark-mode .content-section h2 {
+    color: #81b214;
+}
+
+body.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+body.dark-mode .fechar {
+    color: #888;
+}
+
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; top: 0; width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center; align-items: center;
+}
+.modal-content {
+    background-color: #fff; padding: 30px; border-radius: 10px;
+    max-width: 500px; width: 90%; position: relative;
+    animation: abrirModal 0.4s ease;
+}
+@keyframes abrirModal {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.fechar { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #aaa;}
+button.btn { border: none; cursor: pointer; font-size: 16px; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn-dark-mode {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.btn-dark-mode:hover {
+    background-color: #fff;
+    color: #1e4620;
+}
+
+.content-section-detailed {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.content-section-detailed h2 {
+    color: #1e4620;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.intro-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.grid-solucoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.card {
+    background-color: #f4f7f5;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+    border-top: 4px solid #81b214;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.card h3 {
+    color: #1e4620;
+    margin-bottom: 15px;
+}
+.card ul {
+    list-style-type: none;
+}
+.card ul li {
+    margin-bottom: 10px;
+}
+
+
+button.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+body.dark-mode header {
+    background-color: #0d260f;
+}
+body.dark-mode .content-section-detailed {
+    background-color: #121212;
+}
+body.dark-mode .content-section-detailed h2, 
+body.dark-mode .card h3 {
+    color: #81b214;
+}
+body.dark-mode .intro-text {
+    color: #bbb;
+}
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-top: 4px solid #618810;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
